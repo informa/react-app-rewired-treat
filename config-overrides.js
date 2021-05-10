@@ -6,12 +6,12 @@ const path = require("path");
 module.exports = function override(config, env) {
   const newConfig = { ...config };
 
-  // Add treat plugin for treat styles
+  // Add treat plugin for treat
   newConfig.plugins = [
     new TreatPlugin({
       outputLoaders: [MiniCssExtractPlugin.loader],
-      localIdentName: "_[name]-[local]_[hash:base64:5]",
-      themeIdentName: "__[name]-[local]_[hash:base64:4]",
+      localIdentName: "_[name]-[local]_",
+      themeIdentName: "_[name]-[local]_",
     }),
     new MiniCssExtractPlugin(),
   ].concat(newConfig.plugins);
