@@ -1,21 +1,24 @@
 import { style, styleMap } from "treat";
 
 // output _Label-style_ (export const label = style({)
-// export const label = style({
-//   display: 'inline-block',
-//   lineHeight: 1,
-//   ":empty": {
-//     display: "none",
-//   },
-// });
+export const label = style({
+  display: "inline-block",
+  lineHeight: 1,
+  ":empty": {
+    display: "none",
+  },
+});
 
 // output _Label-style_ (export const boxed = style({)
-// export const boxed = style({
-//   paddingLeft: "8px",
-//   paddingRight: "8px",
-// });
+export const boxed = style({
+  paddingLeft: "8px",
+  paddingRight: "8px",
+  paddingTop: "4px",
+  paddingBottom: "4px",
+  borderRadius: "4px",
+});
 
-export const label = styleMap({
+export const label2 = styleMap({
   base: {
     display: "inline-block",
     lineHeight: 1,
@@ -28,7 +31,7 @@ export const label = styleMap({
     paddingRight: "8px",
     paddingTop: "4px",
     paddingBottom: "4px",
-    borderRadius: "8px",
+    borderRadius: "4px",
   },
 });
 
@@ -41,7 +44,56 @@ export const sizes = styleMap({
   },
 });
 
-export const colorMap = styleMap({
+export const colorMap = {
+  default: styleMap({
+    default: {
+      color: "#666",
+    },
+    green: {
+      color: "green",
+    },
+    orange: {
+      color: "orange",
+    },
+    red: {
+      color: "red",
+    },
+    blue: {
+      color: "blue",
+    },
+    purple: {
+      color: "purple",
+    },
+  }),
+  boxed: styleMap({
+    default: {
+      backgroundColor: "lightGrey",
+      color: "#222",
+    },
+    green: {
+      backgroundColor: "lightGreen",
+      color: "green",
+    },
+    orange: {
+      backgroundColor: "gold",
+      color: "orange",
+    },
+    red: {
+      backgroundColor: "pink",
+      color: "red",
+    },
+    blue: {
+      backgroundColor: "lightBlue",
+      color: "blue",
+    },
+    purple: {
+      backgroundColor: "violet",
+      color: "purple",
+    },
+  }),
+};
+
+export const colorMap2 = styleMap({
   defaultdefault: {
     color: "#666",
   },

@@ -20,16 +20,20 @@ const Label = ({
   ...restProps
 }) => {
   const safeColor = validColors.includes(color) ? color : "default";
-  console.log(`${safeColor}${type}`);
+  const colorType = styles.colorMap[type];
+  console.log(colorType, type);
   const isBoxed = type === "boxed";
 
   const classes = classnames(
     {
-      [styles.label.boxed]: isBoxed,
+      // [styles.boxed]: isBoxed,
+      [styles.label2.boxed]: isBoxed,
     },
-    styles.label.base,
+    // styles.label,
+    styles.label2.base,
     styles.sizes[size],
-    styles.colorMap[`${safeColor}${type}`],
+    // colorType[safeColor],
+    styles.colorMap2[`${safeColor}${type}`],
     className
   );
   return (
