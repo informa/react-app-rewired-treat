@@ -323,10 +323,23 @@ function App() {
           <h3>Button THEME HTML</h3>
           <button class="_Button-style__theme-theme_">Button</button>
         </div>
+        <div style={{ marginRight: "20px" }}>
+          <TreatProvider theme={theme2}>
+            <h3>Button THEME2 COMPONENT</h3>
+            <Button>Button</Button>
+          </TreatProvider>
+        </div>
+        <div>
+          <h3>Button THEME2 HTML</h3>
+          <button class="_Button-style__theme2-theme_">Button</button>
+        </div>
       </div>
 
       <p>
         Example class: <strong>_Button-style__theme-theme_</strong>
+      </p>
+      <p>
+        Example class: <strong>_Button-style__theme2-theme_</strong>
       </p>
 
       <hr style={{ marginBottom: "3em", marginTop: "3em" }} />
@@ -408,6 +421,13 @@ function App() {
         Example class:{" "}
         <strong>
           _BadgeTheme-base__theme-theme_ _BadgeTheme-green__theme-theme_
+        </strong>
+      </p>
+
+      <p>
+        Example class:{" "}
+        <strong>
+          _BadgeTheme-base__theme2-theme_ _BadgeTheme-green__theme2-theme_
         </strong>
       </p>
 
