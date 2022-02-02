@@ -1,20 +1,15 @@
 import React from "react";
-// import "./App.css";
-import { ExternalTreatButton, ThemeProvider, altTheme } from "lib-components";
-import InternalTreatButton from "./components/InternalTreatButton";
+import { Button, DatePicker, Container } from "@myob/myob-widgets";
+import "./App.css";
+import style from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <h3>Internal app button</h3>
-      <InternalTreatButton>Button</InternalTreatButton>
-      <h3>lib-components default theme button</h3>
-      <ExternalTreatButton>Button</ExternalTreatButton>
-      <h3>lib-components alt theme button</h3>
-      <ThemeProvider theme={altTheme}>
-        <ExternalTreatButton>Button</ExternalTreatButton>
-      </ThemeProvider>
-    </div>
+    <Container>
+      <h3 className={style.module}>Rewired</h3>
+      <Button>Yay</Button>
+      <DatePicker name="date-of-birth" label="Date of birth:" />
+    </Container>
   );
 }
 
